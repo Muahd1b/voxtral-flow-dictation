@@ -10,8 +10,8 @@ pub const ENV_ASR_VOXTRAL_MODEL_DIR: &str = "ASR_VOXTRAL_MODEL_DIR";
 pub const ENV_ASR_VOXTRAL_LOCK_FILE: &str = "ASR_VOXTRAL_LOCK_FILE";
 pub const ENV_ASR_GLOBAL_PTT_LOCK_FILE: &str = "ASR_GLOBAL_PTT_LOCK_FILE";
 
-pub const DEFAULT_VOXTRAL_LOCK_FILE: &str = "/tmp/codex-asr-voxtral.lock";
-pub const DEFAULT_GLOBAL_PTT_LOCK_FILE: &str = "/tmp/codex-asr-global-ptt.lock";
+pub const DEFAULT_VOXTRAL_LOCK_FILE: &str = "/tmp/voxdic-voxtral.lock";
+pub const DEFAULT_GLOBAL_PTT_LOCK_FILE: &str = "/tmp/voxdic-global-ptt.lock";
 
 pub fn profile_path() -> PathBuf {
     if let Ok(v) = env::var(ENV_ASR_PROFILE_PATH) {
@@ -55,7 +55,7 @@ fn project_dir() -> PathBuf {
         return PathBuf::from(v).expand_home();
     }
     if let Some(home) = home_dir() {
-        let candidate = home.join("dev/codex-asr-bridge");
+        let candidate = home.join("DEV/voxtral-flow-dictation");
         if candidate.exists() {
             return candidate;
         }

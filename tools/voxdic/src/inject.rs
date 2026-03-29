@@ -70,7 +70,7 @@ pub fn rewrite_selected_text(
     }
 
     let original_clipboard = clipboard_read().unwrap_or_default();
-    let sentinel = "__ASR_SWITCH_SENTINEL__";
+    let sentinel = "__VOXDIC_SENTINEL__";
     clipboard_write(sentinel)?;
 
     if let Err(err) = send_command_shortcut("c") {
@@ -258,7 +258,7 @@ fn run_osascript_owned(lines: Vec<String>) -> Result<String> {
     let msg = if !stderr.is_empty() { stderr } else { stdout };
     if msg.contains("not allowed to send keystrokes") || msg.contains("(1002)") {
         return Err(anyhow!(
-            "macOS denied keystroke injection (TCC 1002). Enable Accessibility and Input Monitoring for your terminal app, then restart ASR_Switch."
+            "macOS denied keystroke injection (TCC 1002). Enable Accessibility and Input Monitoring for your terminal app, then restart Voxdic."
         ));
     }
     Err(anyhow!("AppleScript error: {}", truncate(&msg, 220)))

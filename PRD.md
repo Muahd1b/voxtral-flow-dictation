@@ -3,7 +3,7 @@
 Status: Draft v3
 Date: 2026-03-29
 Owner: Jonas
-Workspace: /Users/jonasknppel/DEV/codex-asr-bridge
+Workspace: /Users/jonasknppel/DEV/voxtral-flow-dictation
 
 ## 1. Product Summary
 Build a fully local, privacy-first dictation product for macOS that delivers reliable focused-app injection with low-latency transcription and high correction quality.

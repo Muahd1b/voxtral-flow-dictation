@@ -8,7 +8,7 @@ Date: 2026-03-29
 - Separation of capture, ASR, processing, injection, and UI.
 
 ## Current Code Layout
-- Single crate at `tools/session-switcher-tui`.
+- Single crate at `tools/voxdic`.
 - Module split in `src/`:
   - `audio.rs`, `asr.rs`, `transform.rs`, `inject.rs`, `daemon.rs`, `ui/*`, `config.rs`.
 - This is the active implementation baseline.

@@ -5,7 +5,7 @@ Scope: Architecture, implementation, and validation references for the local inj
 
 ## Current Baseline
 
-- Runtime: Rust TUI + global daemon (`tools/session-switcher-tui`).
+- Runtime: Rust TUI + global daemon (`tools/voxdic`).
 - ASR: local Voxtral path.
 - Delivery: focused-app injection only.
 - Hotkey: fixed `RIGHT_SHIFT`.

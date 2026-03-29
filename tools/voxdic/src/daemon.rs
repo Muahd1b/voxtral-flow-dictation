@@ -38,7 +38,7 @@ pub fn run_daemon() -> Result<()> {
 
     let trigger_key = Key::ShiftRight;
 
-    eprintln!("ASR global PTT daemon started");
+    eprintln!("Voxdic global PTT daemon started");
     eprintln!("Trigger key: ShiftRight (fixed)");
     eprintln!("Press once to start recording, press again to transcribe+inject");
 

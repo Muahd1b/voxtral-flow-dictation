@@ -78,7 +78,7 @@ impl App {
             rx,
         };
 
-        app.push_runtime("ASR Switch started (local monolith, voxtral backend)");
+        app.push_runtime("Voxtral Flow Dictation started (local monolith, voxtral backend)");
         match app.voxtral.validate() {
             Ok(_) => app.push_runtime("Voxtral backend ready"),
             Err(err) => app.push_runtime(format!("Voxtral readiness warning: {}", err)),

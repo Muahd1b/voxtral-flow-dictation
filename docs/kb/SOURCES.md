@@ -33,6 +33,6 @@ Collected: 2026-03-29
 - `osascript` / System Events behavior observed in local runtime testing.
 
 ## Local Workspace Facts
-- Current runtime path: `tools/session-switcher-tui`.
+- Current runtime path: `tools/voxdic`.
 - Active hotkey behavior: fixed `RIGHT_SHIFT`.
 - Current ASR primary: Voxtral runtime path.

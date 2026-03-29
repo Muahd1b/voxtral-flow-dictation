@@ -1,8 +1,8 @@
-# Codex ASR Switch
+# Voxtral Flow Dictation
 
 Local-only ASR dictation for macOS.
 
-`ASR_Switch` is an injection-only Rust runtime:
+`Voxdic` is an injection-only Rust runtime:
 - global hotkey microphone capture (fixed to `RIGHT_SHIFT`)
 - local Voxtral transcription
 - focused-app text injection via macOS accessibility (`System Events`)
@@ -11,7 +11,7 @@ No FastAPI/WebSocket bridge and no session-forwarding transport exist in this re
 
 ## Project Layout
 
-- `tools/session-switcher-tui/` - Rust app + global daemon
+- `tools/voxdic/` - Rust app + global daemon
 - `config/profile.json` - runtime profile (created on first run)
 - `scripts/download_model.py` - optional Whisper model download helper
 - `docs/` - PRD + KB + analysis docs
@@ -19,20 +19,20 @@ No FastAPI/WebSocket bridge and no session-forwarding transport exist in this re
 ## Run
 
 ```bash
-ASR_Switch
+Voxdic
 ```
 
 From source:
 
 ```bash
-cd tools/session-switcher-tui
+cd tools/voxdic
 cargo run --release
 ```
 
 Daemon-only mode:
 
 ```bash
-ASR_Switch daemon
+Voxdic daemon
 ```
 
 ## Runtime Behavior
@@ -53,8 +53,8 @@ ASR_Switch daemon
   - `ASR_VOXTRAL_MODEL_DIR`
   - default root: `~/DEV/voxtral.c`
 - Lock files:
-  - `ASR_VOXTRAL_LOCK_FILE` (default `/tmp/codex-asr-voxtral.lock`)
-  - `ASR_GLOBAL_PTT_LOCK_FILE` (default `/tmp/codex-asr-global-ptt.lock`)
+  - `ASR_VOXTRAL_LOCK_FILE` (default `/tmp/voxdic-voxtral.lock`)
+  - `ASR_GLOBAL_PTT_LOCK_FILE` (default `/tmp/voxdic-global-ptt.lock`)
 
 ## Runtime Env Vars
 
